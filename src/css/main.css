@@ -1,0 +1,164 @@
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+  width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* resets */
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gallery-container {
+  padding-bottom: 24px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+/* common */
+
+.header {
+  background-color: #3f57b3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.search-input {
+  width: 240px;
+
+  padding: 8px;
+  padding-left: 10px;
+
+  outline: none;
+  border: none;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+.submit-button__clicked .submit-svg {
+  fill: #3f57b3;
+}
+
+.submit-svg {
+  fill: #3c3c3c;
+}
+
+.gallery {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-card {
+  width: 360px;
+  border-radius: 4px;
+
+  margin: 20px 10px;
+
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(110, 110, 110, 0.5);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  padding: 12px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-item b {
+  margin-bottom: 4px;
+}
+
+.load-more {
+  margin-top: 8px;
+  padding: 10px 14px;
+
+  font-weight: 600;
+  color: white;
+  background-color: #3f57b3;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
