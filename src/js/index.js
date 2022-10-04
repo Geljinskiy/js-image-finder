@@ -1,7 +1,5 @@
 import { fetchImages, pagination, per_page } from './fetchImages';
-('./fetchImages');
 import { makeLayout } from './makeLayout';
-('./makeLayout');
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const subBtn = document.querySelector('.submit-button');

@@ -1,4 +1,5 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import axios, { Axios } from 'axios';
 
 const URL = 'https://pixabay.com/api/';
 const KEY = '30328411-b65b8d89f7679f3f92fb1ff1e';
@@ -17,15 +18,13 @@ export const pagination = {
 
 export async function fetchImages(query) {
   try {
-    const response = await fetch(
+    const response = await axios.get(
       `${URL}${SETS}&q=${query}&key=${KEY}&page=${pagination.page}&per_page=${per_page}`
     );
-    const responseJSON = await response.json();
 
     pagination.targetSearch = query;
-    // pagination.page += 1;
 
-    return responseJSON;
+    return response.data;
   } catch (er) {
     Notify.failure(er);
   }
